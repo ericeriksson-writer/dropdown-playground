@@ -37,7 +37,6 @@
 /* Interactive Demo Section */
 .interactive-demo {
   background: #FFFFFF;
-  padding: 40px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   margin-bottom: 60px;
@@ -51,26 +50,75 @@
   text-align: center;
 }
 
-.demo-container {
+/* Tab Navigation - Full Width */
+.tab-navigation {
+  display: flex;
+  border-bottom: 1px solid #E4E7ED;
+  margin-bottom: 0;
+  border-radius: 12px 12px 0 0;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 16px 24px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  color: #828282;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 3px solid transparent;
+  position: relative;
+}
+
+.tab-button:first-child {
+  border-radius: 12px 0 0 0;
+}
+
+.tab-button:last-child {
+  border-radius: 0 12px 0 0;
+}
+
+.tab-button:hover {
+  color: #000000;
+  background: rgba(0, 122, 255, 0.05);
+}
+
+.tab-button.active {
+  color: #007AFF;
+  background: rgba(0, 122, 255, 0.05);
+  border-bottom-color: #007AFF;
+}
+
+/* Tab Content */
+.tab-content-wrapper {
+  min-height: 400px;
+}
+
+.preview-content {
   display: flex;
   gap: 60px;
   align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 40px 0;
 }
 
 .dropdown-demo {
-  flex: 0 0 300px;
+  flex: 0 0 400px;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  align-items: center;
+  padding: 40px;
+  border-radius: 12px;
 }
 
 .controls {
-  flex: 0 0 400px;
+  flex: 0 0 300px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
 }
 
 .control-group {
@@ -109,6 +157,108 @@
 .checkbox-label input {
   margin: 0;
   cursor: pointer;
+}
+
+/* Code Content */
+.code-content {
+  padding: 24px;
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #E4E7ED;
+}
+
+.code-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.copy-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid #E4E7ED;
+  border-radius: 8px;
+  background: #FFFFFF;
+  font-size: 14px;
+  font-weight: 500;
+  color: #828282;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.copy-button:hover {
+  border-color: #007AFF;
+  color: #007AFF;
+  background: rgba(0, 122, 255, 0.05);
+}
+
+.copy-button.success {
+  border-color: #34C759;
+  color: #34C759;
+  background: rgba(52, 199, 89, 0.1);
+}
+
+.code-block {
+  background: #F8F9FA;
+  border: 1px solid #E4E7ED;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 0;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #000000;
+  overflow-x: auto;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.code-block code {
+  background: none;
+  padding: 0;
+  border: none;
+  font-family: inherit;
+  white-space: pre;
+}
+
+.import-block {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #E4E7ED;
+}
+
+.import-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: #828282;
+  margin-bottom: 8px;
+}
+
+.import-code {
+  background: #F5F5F9;
+  border: 1px solid #E4E7ED;
+  border-radius: 6px;
+  padding: 12px;
+  margin: 0;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #666666;
+}
+
+.import-code code {
+  background: none;
+  padding: 0;
+  border: none;
+  font-family: inherit;
 }
 
 /* Matrix Section */
@@ -220,10 +370,23 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .demo-container {
+  .preview-content {
     flex-direction: column;
     align-items: center;
     gap: 32px;
+    padding: 24px 0;
+  }
+
+  .dropdown-demo {
+    flex: none;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .controls {
+    flex: none;
+    width: 100%;
+    max-width: 300px;
   }
 
   .radio-group,
@@ -243,14 +406,13 @@
     min-height: 60px;
   }
 
-  .dropdown-demo,
-  .controls {
-    flex: none;
-    width: 100%;
-    max-width: 300px;
+  .code-block {
+    font-size: 12px;
+    padding: 16px;
   }
 
-  .controls {
-    flex: 0 0 300px;
+  .tab-button {
+    padding: 12px 16px;
+    font-size: 14px;
   }
 } 
