@@ -1,0 +1,256 @@
+.playground {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.playground h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #000000;
+  text-align: center;
+}
+
+.playground-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.playground-grid section {
+  background: #FFFFFF;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.playground-grid h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+/* Interactive Demo Section */
+.interactive-demo {
+  background: #FFFFFF;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 60px;
+}
+
+.interactive-demo h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 32px;
+  color: #000000;
+  text-align: center;
+}
+
+.demo-container {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dropdown-demo {
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.controls {
+  flex: 0 0 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.control-group > label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.radio-group,
+.checkbox-group {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.radio-label,
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #000000;
+  cursor: pointer;
+  padding: 4px 0;
+  white-space: nowrap;
+}
+
+.radio-label input,
+.checkbox-label input {
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Matrix Section */
+.matrix-section {
+  margin-bottom: 60px;
+}
+
+.matrix-section h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 32px;
+  color: #000000;
+}
+
+.matrix-section h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 40px 0 24px 0;
+  color: #000000;
+}
+
+.matrix {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 32px;
+}
+
+.matrix-header {
+  display: grid;
+  grid-template-columns: 120px repeat(3, 1fr);
+  background: #F5F5F9;
+}
+
+.matrix-row {
+  display: grid;
+  grid-template-columns: 120px repeat(3, 1fr);
+  border-top: 1px solid #E4E7ED;
+}
+
+.matrix-cell {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+
+.header-cell {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+  background: #F5F5F9;
+}
+
+.size-cell {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+  background: #F5F5F9;
+  border-right: 1px solid #E4E7ED;
+}
+
+.component-cell {
+  background: #FFFFFF;
+  border-right: 1px solid #E4E7ED;
+}
+
+.component-cell:last-child {
+  border-right: none;
+}
+
+/* Info Section */
+.playground-info {
+  background: #F5F5F9;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.playground-info h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #000000;
+}
+
+.playground-info ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.playground-info li {
+  font-size: 14px;
+  color: #828282;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.playground-info li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #000000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .demo-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .radio-group,
+  .checkbox-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .matrix-header,
+  .matrix-row {
+    grid-template-columns: 100px repeat(3, 1fr);
+    font-size: 12px;
+  }
+
+  .matrix-cell {
+    padding: 12px 8px;
+    min-height: 60px;
+  }
+
+  .dropdown-demo,
+  .controls {
+    flex: none;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .controls {
+    flex: 0 0 300px;
+  }
+} 
