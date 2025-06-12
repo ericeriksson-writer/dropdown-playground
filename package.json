@@ -2,7 +2,7 @@
   "name": "dropdown-playground",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://yourusername.github.io/dropdown-playground",
+  "homepage": "https://ericeriksson-writer.github.io/dropdown-playground",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

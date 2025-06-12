@@ -4,7 +4,7 @@ A fully interactive playground for testing and showcasing a custom dropdown comp
 
 ## 🚀 Live Demo
 
-Visit the live playground: [https://yourusername.github.io/dropdown-playground](https://yourusername.github.io/dropdown-playground)
+Visit the live playground: [https://ericeriksson-writer.github.io/dropdown-playground](https://ericeriksson-writer.github.io/dropdown-playground)
 
 ## ✨ Features
 
@@ -48,7 +48,7 @@ Visit the live playground: [https://yourusername.github.io/dropdown-playground](
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/dropdown-playground.git
+   git clone https://github.com/ericeriksson-writer/dropdown-playground.git
    cd dropdown-playground
    ```
 
