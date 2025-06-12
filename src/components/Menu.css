@@ -1,0 +1,67 @@
+.menu-container {
+  display: flex;
+  gap: 8px;
+  position: relative;
+}
+
+.menu {
+  background: #FFFFFF;
+  border: 1px solid #E4E7ED;
+  border-radius: 8px;
+  box-shadow: 0 1px 8px rgba(191, 203, 255, 0.25);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: 'Poppins', sans-serif;
+  overflow-y: auto;
+  overflow-x: visible;
+  min-width: 200px;
+  max-width: 400px;
+  position: relative;
+}
+
+.submenu-panel {
+  background: #FFFFFF;
+  border: 1px solid #E4E7ED;
+  border-radius: 8px;
+  box-shadow: 0 1px 8px rgba(191, 203, 255, 0.25);
+  min-width: 200px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  animation: submenuSlideIn 0.15s ease-out;
+}
+
+.submenu-header {
+  padding: 12px 16px 8px 16px;
+  border-bottom: 1px solid #E4E7ED;
+  background: #F8F9FA;
+  border-radius: 8px 8px 0 0;
+}
+
+.submenu-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #828282;
+  letter-spacing: 0.5px;
+}
+
+.submenu-content {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+@keyframes submenuSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} 

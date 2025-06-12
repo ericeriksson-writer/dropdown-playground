@@ -1,4 +1,65 @@
 .app {
   min-height: 100vh;
   background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-nav {
+  background: #FFFFFF;
+  border-bottom: 1px solid #E4E7ED;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.nav-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-link {
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #828282;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #000000;
+  background: #F5F5F9;
+}
+
+.nav-link.active {
+  color: #007AFF;
+  background: rgba(0, 122, 255, 0.1);
+}
+
+.app-main {
+  flex: 1;
+  padding: 0;
 } 
